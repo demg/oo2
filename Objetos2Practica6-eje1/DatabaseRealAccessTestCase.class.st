@@ -35,14 +35,23 @@ self assert:((database getSearchResults: 'select * from comics where id=10') = #
 DatabaseRealAccessTestCase >> testGetSearchResultsProxy [
 	"comment stating purpose of message"
 
-self assert:((databaseProxy getSearchResults: 'select * from comics where id=1') = #('Spiderman' 'Marvel')).
-
-self assert:((databaseProxy getSearchResults: 'select * from comics where id=10') = #()).
-
-
-self assert:((databaseProxyFalse  getSearchResults: 'select * from comics where id=1') = #('Spiderman' 'Marvel')) equals: false.
-
-self assert:((databaseProxyFalse getSearchResults: 'select * from comics where id=10') = #())equals: false.
+	self
+		assert: (databaseProxy getSearchResults: 'select * from comics where id=1')
+		equals: #('Spiderman' 'Marvel').
+	self
+		assert: (databaseProxy getSearchResults: 'select * from comics where id=10')
+		equals: #().
+	self
+		assert:
+			(databaseProxyFalse
+				getSearchResults: 'select * from comics where id=1')
+				= #('Spiderman' 'Marvel')
+		equals: false.
+	self
+		assert:
+			(databaseProxyFalse
+				getSearchResults: 'select * from comics where id=10') = #()
+		equals: false
 ]
 
 { #category : #tests }
@@ -50,8 +59,8 @@ DatabaseRealAccessTestCase >> testInsertNewRow [
 	"comment stating purpose of message"
 	|rowData|
 	rowData:= #('Paturuzu' 'La flor').
- self assert: ((database insertNewRow: rowData) == 3).
- self assert:((database getSearchResults: 'select * from comics where id=3') = rowData).
+ self assert: (database insertNewRow: rowData) equals: 3.
+ self assert: (database getSearchResults: 'select * from comics where id=3') equals: rowData.
 ]
 
 { #category : #tests }
@@ -59,8 +68,8 @@ DatabaseRealAccessTestCase >> testInsertNewRowProxy [
 	"comment stating purpose of message"
 	|rowData|
 	rowData:= #('Paturuzu' 'La flor').
- self assert: ((databaseProxy insertNewRow: rowData) == 3).
- self assert:((databaseProxy getSearchResults: 'select * from comics where id=3') = rowData).
+ self assert: (databaseProxy insertNewRow: rowData) equals: 3.
+ self assert:(databaseProxy getSearchResults: 'select * from comics where id=3') equals: rowData.
 
  self assert:  ((databaseProxyFalse insertNewRow: rowData) == 3) equals: false.
  self assert: ((databaseProxyFalse getSearchResults: 'select * from comics where id=3') = rowData)  equals: false.

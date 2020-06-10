@@ -14,9 +14,11 @@ DataBaseRealProxyAccess class >> newWith: aAtutenticador with: aDataBase [
 ]
 
 { #category : #'as yet unclassified' }
-DataBaseRealProxyAccess >> getSearchResults: queryString [
-	autenticador isLogin ifTrue: [ ^ databases getSearchResults: queryString ].
-	 ^ false.
+DataBaseRealProxyAccess >> doesNotUnderstand: aMessage [
+	autenticador isLogin
+		ifTrue:
+			[ ^ databases perform: (aMessage selector) withArguments: (aMessage arguments) ].
+	^ false
 ]
 
 { #category : #'as yet unclassified' }
@@ -24,12 +26,4 @@ DataBaseRealProxyAccess >> inicializarAutenticador: aAutenticator database: aDat
 
 	autenticador := aAutenticator. 
 	databases := aDataBase.
-]
-
-{ #category : #'as yet unclassified' }
-DataBaseRealProxyAccess >> insertNewRow: aString [
-
-	autenticador isLogin ifTrue: [ ^ databases insertNewRow: aString  ].
-	
-	^ false.
 ]
