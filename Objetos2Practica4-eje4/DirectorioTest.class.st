@@ -72,3 +72,24 @@ DirectorioTest >> testListadoDeContenido [
 	listado := listadoStream contents.
 	self assert: conSubdirectorios listadoDeContenido = listado
 ]
+
+{ #category : #'as yet unclassified' }
+DirectorioTest >> testTamanoTotalOcupado [
+	self assert: vacio tamanoTotalOcupado   = 32000.
+	self assert: conUnArchivo tamanoTotalOcupado = 32128.
+	self assert: conVariosArchivos tamanoTotalOcupado = 2042010 
+]
+
+{ #category : #'as yet unclassified' }
+DirectorioTest >> testarchivoMasGrande [
+	self assert: vacio archivoMasGrande = nil.
+	self assert: conUnArchivo archivoMasGrande =  config.
+	self assert: conVariosArchivos archivoMasGrande = grande 
+]
+
+{ #category : #'as yet unclassified' }
+DirectorioTest >> testarchivoMasNuevo [
+	self assert: vacio archivoMasNuevo  = nil.
+	self assert: conUnArchivo archivoMasGrande =  config.
+	self assert: conVariosArchivos archivoMasGrande = grande 
+]

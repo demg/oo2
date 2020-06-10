@@ -8,9 +8,3 @@ Class {
 Connection >> sendData: aData crc: aNumber [
 
 ]
-
-{ #category : #'effects-toggle' }
-Connection >> toggle [
-
-	^ SubclassResponsibility .
-]

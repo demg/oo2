@@ -4,8 +4,7 @@ Class {
 	#category : #'Objetos2Practica5-eje3'
 }
 
-{ #category : #'effects-toggle' }
-Conn4G >> toggle [
-
-	^ WiFiConn new.
+{ #category : #'as yet unclassified' }
+Conn4G >> pict [
+	^ self
 ]

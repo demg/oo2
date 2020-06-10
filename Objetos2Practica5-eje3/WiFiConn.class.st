@@ -1,10 +1,10 @@
 Class {
 	#name : #WiFiConn,
-	#superclass : #Connection,
+	#superclass : #AdapterWifi,
 	#category : #'Objetos2Practica5-eje3'
 }
 
-{ #category : #'effects-toggle' }
-WiFiConn >> toggle [ 
-	^ WiFiConn new.
+{ #category : #'as yet unclassified' }
+WiFiConn >> symb [
+^self
 ]

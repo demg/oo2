@@ -19,18 +19,8 @@ Temporal >> cantidad: aNumber [
 ]
 
 { #category : #accessing }
-Temporal >> cantidadDeHijos [
-	^ cantidadDeHijos
-]
-
-{ #category : #accessing }
 Temporal >> cantidadDeHorasTrabajadas [
 	^ cantidadDeHorasTrabajadas
-]
-
-{ #category : #accessing }
-Temporal >> casado [
-	^ casado
 ]
 
 { #category : #initialize }

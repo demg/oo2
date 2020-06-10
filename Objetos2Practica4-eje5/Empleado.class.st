@@ -15,10 +15,15 @@ Empleado class >> newCasado: esCasado conHijos: hijos con: horas [
 ]
 
 { #category : #'as yet unclassified' }
-Empleado >> adicional [ 
+Empleado >> adicional [
+	casado
+		ifTrue: [ ^ self calcularXCantidadDeHijos + 500 ].
+	^ self calcularXCantidadDeHijos
+]
 
-	casado ifTrue: [ ^ (cantidadDeHijos * 100) + 500   ].
-	^ (cantidadDeHijos * 100)
+{ #category : #'as yet unclassified' }
+Empleado >> calcularXCantidadDeHijos [
+	^ self  cantidadDeHijos * 100
 ]
 
 { #category : #'as yet unclassified' }
@@ -26,10 +31,19 @@ Empleado >> cantidad: aNumber [
 ^SubclassResponsibility 
 ]
 
+{ #category : #accessing }
+Empleado >> cantidadDeHijos [
+	^ cantidadDeHijos
+]
+
+{ #category : #accessing }
+Empleado >> casado [
+	^ casado
+]
+
 { #category : #initialize }
 Empleado >> inicializarCasado: aCasado conHijo: hijos con: años. [
 
-self initialize .
  self cantidad:  años.
 cantidadDeHijos := hijos.
 casado := aCasado

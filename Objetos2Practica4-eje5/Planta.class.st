@@ -28,13 +28,3 @@ Planta >> cantidad: aNumber [
 Planta >> cantidadDeAños [
 	^ cantidadDeAños
 ]
-
-{ #category : #accessing }
-Planta >> cantidadDeHijos [
-	^ cantidadDeHijos
-]
-
-{ #category : #accessing }
-Planta >> casado [
-	^ casado
-]

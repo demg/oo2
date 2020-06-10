@@ -29,16 +29,16 @@ TestPlanta >> testPlanta [
 	self assert: planta0 cantidadDeAños isNotNil .
 	self assert: planta0 cantidadDeHijos isNotNil .
 	self assert: planta0 casado isNotNil .
-	self assert: planta0 basico = 3000.
+	self assert: planta0 basico equals: 3000.
 ]
 
 { #category : #tests }
 TestPlanta >> testPlantaCalcularSueldo [
 	"testeo de la clase se instancie bien"
 
-	self assert: planta0 sueldo  = 2610.
-	self assert: planta1 sueldo  = 3275.
-	self assert: planta2 sueldo  = 3655.
+	self assert: planta0 sueldo  equals: 2610.
+	self assert: planta1 sueldo  equals: 3275.
+	self assert: planta2 sueldo  equals: 3655.
 "	
 	self assert: planta1 cantidadDeAños = 1 .
 	self assert: planta1 cantidadDeHijos = 1 .
@@ -54,16 +54,16 @@ TestPlanta >> testPlantaCalcularSueldo [
 TestPlanta >> testPlantaCantidades [
 	"testeo de la clase se instancie bien"
 
-	self assert: planta0 cantidadDeAños = 0 .
-	self assert: planta0 cantidadDeHijos = 0 .
-	self assert: planta0 casado = false.
+	self assert: (planta0 cantidadDeAños) equals: 0 .
+	self assert: (planta0 cantidadDeHijos) equals: 0 .
+	self assert: (planta0 casado) equals: false.
 	
-	self assert: planta1 cantidadDeAños = 1 .
-	self assert: planta1 cantidadDeHijos = 1 .
-	self assert: planta1 casado = true.
+	self assert: (planta1 cantidadDeAños) equals: 1 .
+	self assert: (planta1 cantidadDeHijos) equals: 1 .
+	self assert: (planta1 casado) equals: true.
 	
-		self assert: planta2 cantidadDeAños = 3 .
-	self assert: planta2 cantidadDeHijos = 3 .
-	self assert: planta2 casado = true.
+		self assert: (planta2 cantidadDeAños) equals: 3 .
+	self assert: (planta2 cantidadDeHijos) equals: 3 .
+	self assert: (planta2 casado) equals: true.
 
 ]

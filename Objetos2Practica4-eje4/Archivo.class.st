@@ -19,6 +19,17 @@ Archivo >> archivoMasNuevo [
 	^ self
 ]
 
+{ #category : #'as yet unclassified' }
+Archivo >> contarComoArchivo [
+	^ 1
+]
+
+{ #category : #queries }
+Archivo >> listarDirectorios: aPath [
+
+	^ ''
+]
+
 { #category : #creacion }
 Archivo >> llamado: aName creadoEl: aToday kBytes:aKBytes [
 	self llamado:aName  creadoEl: aToday.

@@ -27,7 +27,7 @@ TesTemporal >> setUp [
 TesTemporal >> testTemporal [
 	"testeo de la clase se instancie bien"
 
-	self assert: temporal0 sueldo = 3480.
-	self assert: temporal1 sueldo = 4058.70.
-	self assert: temporal2 sueldo = 4266.1
+	self assert: temporal0 sueldo equals: 3480.
+	self assert: temporal1 sueldo equals: 4058.70.
+	self assert: temporal2 sueldo equals: 4266.1
 ]

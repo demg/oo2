@@ -9,7 +9,7 @@ Class {
 
 { #category : #'as yet unclassified' }
 Personal >> adicional [
-	^ SubclassResponsibility 
+	^ self subclassResponsibility  
 ]
 
 { #category : #calculating }

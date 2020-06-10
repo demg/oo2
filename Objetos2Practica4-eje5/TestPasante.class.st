@@ -27,17 +27,17 @@ TestPasante >> setUp [
 TestPasante >> testPasante [
 	"testeo de la clase se instancie bien"
 
-	self assert: pasante0 cantidadDeExamenes isNotNil .
-	self assert: pasante0 basico = 2000.
+	self assert:   pasante0 cantidadDeExamenes isNotNil .
+	self assert: pasante0 basico equals: 2000.
 
 ]
 
 { #category : #tests }
 TestPasante >> testPasanteCalcularSueldo [
 	"testeo de la clase se instancie bien"
-	self assert: pasante0 sueldo  = 1740.
-	self assert: pasante1 sueldo  = 1835.
-	self assert: pasante2 sueldo  = 1930.
+	self assert: pasante0 sueldo  equals: 1740.
+	self assert: pasante1 sueldo  equals: 1835.
+	self assert: pasante2 sueldo  equals: 1930.
 	
 
 ]
@@ -46,7 +46,7 @@ TestPasante >> testPasanteCalcularSueldo [
 TestPasante >> testPasanteCantidades [
 	"testeo de la clase se instancie bien"
 
-	self assert: pasante1 cantidadDeExamenes =1 .
-	self assert: pasante1 basico = 2000.
+	self assert: pasante1 cantidadDeExamenes equals: 1 .
+	self assert: pasante1 basico equals: 2000.
 
 ]
