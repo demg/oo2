@@ -1,10 +1,11 @@
 Class {
 	#name : #WiFiConn,
-	#superclass : #AdapterWifi,
+	#superclass : #Connection,
 	#category : #'Objetos2Practica5-eje3'
 }
 
 { #category : #'as yet unclassified' }
 WiFiConn >> symb [
-^self
+		varTest := 'Connection WiFi'.
+	^ 	Transcript show:'Connection WiFi', 'cr'.
 ]

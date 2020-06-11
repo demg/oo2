@@ -1,10 +1,12 @@
 Class {
 	#name : #Conn4G,
-	#superclass : #Connection,
+	#superclass : #Object,
 	#category : #'Objetos2Practica5-eje3'
 }
 
 { #category : #'as yet unclassified' }
 Conn4G >> pict [
-	^ self
+	
+	Transcript show:'Connection 4G'.
+	^ 'Connection 4G'.
 ]

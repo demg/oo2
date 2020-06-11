@@ -10,6 +10,20 @@ Class {
 	#category : #'Objetos2Practica5-eje3'
 }
 
+{ #category : #'as yet unclassified' }
+Dispositivo >> cambiarConexion: aConnection [
+	
+	connection := aConnection.
+	connection  symb.
+	ringer sound.
+]
+
+{ #category : #'as yet unclassified' }
+Dispositivo >> coneccion [ 
+
+	^ connection tipoDeConeccion 
+]
+
 { #category : #sending }
 Dispositivo >> crcCalculator: aData [
 	| number |
@@ -18,13 +32,13 @@ Dispositivo >> crcCalculator: aData [
 ]
 
 { #category : #initialize }
-Dispositivo >> initialize [ 
+Dispositivo >> initializeConector: aConector calculador: aCalculador display: aDisplay ringer: aRinger [
 
-	super initialize.
-	connection := Conn4G  new.
-	crcCalculator := CRC16_Caculator new.
-	display := Displays new.
-	ringer := Ringer new.
+	
+	connection := aConector.
+	crcCalculator := aCalculador.
+	display := aDisplay.
+	ringer := aRinger .
 ]
 
 { #category : #sending }
@@ -37,10 +51,4 @@ Dispositivo >> send: aData [
 { #category : #sending }
 Dispositivo >> sendData: aData crc: number [
 	connection sendData: aData crc: number
-]
-
-{ #category : #'effects-toggle' }
-Dispositivo >> toggle [
-
-	connection := connection toggle 
 ]

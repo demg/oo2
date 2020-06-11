@@ -1,11 +1,11 @@
 Class {
-	#name : #'CRC16_Caculator',
+	#name : #'CRC16_Calculator',
 	#superclass : #Caculator,
 	#category : #'Objetos2Practica5-eje3'
 }
 
 { #category : #message }
-CRC16_Caculator >> crcFor: aString [
+CRC16_Calculator >> crcFor: aString [
 
 	^ CRC  crc16FromCollection: aString asString 
 ]
